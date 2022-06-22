@@ -55,12 +55,12 @@ export default function Home() {
   const [ canvas, setCanvas ] = useState(<></>)
 
   const capture = async () => {
-    setCaptureCall(true)
     console.log("in Capture call")
     const canvasl = await html2canvas(captureRef.current)
     console.log("after canvasing")
     console.log(canvasl)
     setCanvas(canvasl)
+    setCaptureCall(true)
   }
 
   return (
